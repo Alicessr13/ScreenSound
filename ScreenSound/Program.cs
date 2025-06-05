@@ -6,6 +6,7 @@ musica1.Genero = "Rock";
 musica1.Duracao = 354;
 musica1.Ano = 1975;
 musica1.Disponivel = true;
+Console.WriteLine(musica1.DescricaoResumida);
 
 Musica musica2 = new Musica();
 musica2.Nome = "To Love You More";
@@ -14,7 +15,7 @@ musica2.Album = "Falling Into You";
 musica2.Genero = "Pop";
 musica2.Duracao = 240;
 musica2.Ano = 1996;
-musica2.Disponivel = true;
+musica2.Disponivel = false;
 
 musica1.ExibirFichaTecnica();
 Console.WriteLine();

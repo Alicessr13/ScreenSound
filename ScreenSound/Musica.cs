@@ -7,6 +7,15 @@
     public int Duracao { get; set; }
     public int Ano { get; set; }
     public bool Disponivel { get; set; }
+    public string DescricaoResumida 
+    {
+        get
+        {
+            return $"A musica {Nome} pertence a banda {Artista} ({Ano})";
+        }
+    }
+    public string DescricaoResumidaLambda => $"A musica {Nome} pertence a banda {Artista} ({Ano})";
+
 
     public void ExibirFichaTecnica()
     {
