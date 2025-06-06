@@ -6,21 +6,37 @@ musica1.Genero = "Rock";
 musica1.Duracao = 354;
 musica1.Ano = 1975;
 musica1.Disponivel = true;
-Console.WriteLine(musica1.DescricaoResumida);
+//Console.WriteLine(musica1.DescricaoResumida);
+
+//Musica musica2 = new Musica();
+//musica2.Nome = "To Love You More";
+//musica2.Artista = "Celine Dion";
+//musica2.Album = "Falling Into You";
+//musica2.Genero = "Pop";
+//musica2.Duracao = 240;
+//musica2.Ano = 1996;
+//musica2.Disponivel = false;
+
+//musica1.ExibirFichaTecnica();
+//Console.WriteLine();
+//musica2.ExibirFichaTecnica();
+
+Album albumDoQueen = new Album();
+albumDoQueen.Nome = "A Night at the Opera";
 
 Musica musica2 = new Musica();
-musica2.Nome = "To Love You More";
-musica2.Artista = "Celine Dion";
-musica2.Album = "Falling Into You";
-musica2.Genero = "Pop";
-musica2.Duracao = 240;
-musica2.Ano = 1996;
-musica2.Disponivel = false;
+musica2.Nome = "Love of My Life";
+musica2.Artista = "Queen";
+musica2.Album = "A Night at the Opera";
+musica2.Genero = "Rock";
+musica2.Duracao = 220;
+musica2.Ano = 1975;
+musica2.Disponivel = true;
 
-musica1.ExibirFichaTecnica();
-Console.WriteLine();
-musica2.ExibirFichaTecnica();
+albumDoQueen.AdicionarMusica(musica1);
+albumDoQueen.AdicionarMusica(musica2);
 
+albumDoQueen.ExibirMusicas();
 
 //// Screen Sound
 //string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
