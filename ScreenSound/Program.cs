@@ -1,11 +1,15 @@
-﻿Musica musica1 = new Musica();
-musica1.Nome = "Bohemian Rhapsody";
-musica1.Artista = "Queen";
-musica1.Album = "A Night at the Opera";
-musica1.Genero = "Rock";
-musica1.Duracao = 354;
-musica1.Ano = 1975;
-musica1.Disponivel = true;
+﻿Banda queen = new Banda("Queen");
+
+Album albumDoQueen = new Album("A Night at the Opera", queen);
+
+
+Musica musica1 = new Musica("Bohemian Rhapsody", queen, albumDoQueen)
+{
+    Genero = "Rock",
+    Duracao = 354,
+    Ano = 1975,
+    Disponivel = true
+};
 //Console.WriteLine(musica1.DescricaoResumida);
 
 //Musica musica2 = new Musica();
@@ -21,22 +25,22 @@ musica1.Disponivel = true;
 //Console.WriteLine();
 //musica2.ExibirFichaTecnica();
 
-Album albumDoQueen = new Album();
-albumDoQueen.Nome = "A Night at the Opera";
 
-Musica musica2 = new Musica();
-musica2.Nome = "Love of My Life";
-musica2.Artista = "Queen";
-musica2.Album = "A Night at the Opera";
+Musica musica2 = new Musica("Love of My Life", queen, albumDoQueen);
 musica2.Genero = "Rock";
 musica2.Duracao = 220;
 musica2.Ano = 1975;
 musica2.Disponivel = true;
 
-albumDoQueen.AdicionarMusica(musica1);
-albumDoQueen.AdicionarMusica(musica2);
+//albumDoQueen.AdicionarMusica(musica1);
+//albumDoQueen.AdicionarMusica(musica2);
 
 albumDoQueen.ExibirMusicas();
+
+
+//queen.AdicionarAlbum(albumDoQueen);
+Console.WriteLine();
+queen.ExibirDiscografia();
 
 //// Screen Sound
 //string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
