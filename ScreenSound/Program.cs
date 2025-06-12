@@ -35,12 +35,40 @@ musica2.Disponivel = true;
 //albumDoQueen.AdicionarMusica(musica1);
 //albumDoQueen.AdicionarMusica(musica2);
 
-albumDoQueen.ExibirMusicas();
+//albumDoQueen.ExibirMusicas();
 
 
 //queen.AdicionarAlbum(albumDoQueen);
-Console.WriteLine();
-queen.ExibirDiscografia();
+//Console.WriteLine();
+//queen.ExibirDiscografia();
+
+Convidado convidado = new Convidado("Carlo", new DateOnly(1995, 6, 12), "Italiano");
+
+Podcast podcast = new Podcast("Tech Talks", "Discussões sobre tecnologia e inovação");
+
+Episodio episodio1 = new Episodio("O Futuro da IA", 1)
+{
+   Duracao = 3600,
+};
+
+Episodio episodio2 = new Episodio("Desenvolvimento Sustentável", 2)
+{
+    Duracao = 2700,
+};
+
+Episodio episodio3 = new Episodio("Inovação em Tecnologia", 3)
+{
+    Duracao = 3000,
+};
+
+episodio1.AdicionarConvidado(convidado);
+
+podcast.AdicionarEpisodio(episodio1);
+podcast.AdicionarEpisodio(episodio3);
+podcast.AdicionarEpisodio(episodio2);
+
+podcast.ExibirPodcast();
+
 
 //// Screen Sound
 //string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
