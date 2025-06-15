@@ -1,7 +1,9 @@
-﻿public class Episodio
+﻿namespace ScreenSound.Models;
+
+public class Episodio
 {
     public string Titulo { get; }
-    public int Duracao { get; set; }
+    public int Duracao { get; }
     public int Ordem { get; }
     public List<Convidado> Convidados { get; set; }
 
@@ -13,10 +15,11 @@
         }
     }
 
-    public Episodio(string titulo, int ordem)
+    public Episodio(string titulo, int ordem, int duracao)
     {
         Titulo = titulo;
         Ordem = ordem;
+        Duracao = duracao;
     }
 
     public void AdicionarConvidado(Convidado convidado)

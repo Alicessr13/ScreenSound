@@ -1,4 +1,6 @@
-﻿class Album
+﻿namespace ScreenSound.Models;
+
+class Album
 {
     public string Nome { get; }
     public int DuracaoTotal => Musicas.Sum(m => m.Duracao);

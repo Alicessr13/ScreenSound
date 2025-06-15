@@ -1,4 +1,6 @@
-﻿class Banda
+﻿namespace ScreenSound.Models;
+
+class Banda
 {
     public string Nome { get; }
     private List<Album> albuns = new List<Album>();
