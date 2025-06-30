@@ -1,6 +1,6 @@
 ﻿namespace ScreenSound.Models;
 
-public class Episodio
+internal class Episodio
 {
     public string Titulo { get; }
     public int Duracao { get; }

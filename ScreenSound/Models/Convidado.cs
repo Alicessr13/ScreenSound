@@ -1,6 +1,6 @@
 ﻿namespace ScreenSound.Models;
 
-public class Convidado
+internal class Convidado
 {
     public string Nome { get; }
     public DateOnly Nascimento { get; set; }
