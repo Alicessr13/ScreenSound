@@ -1,10 +1,11 @@
 ﻿namespace ScreenSound.Models;
 
-internal class Album
+internal class Album : IAvaliavel
 {
     public string Nome { get; }
     public int DuracaoTotal => Musicas.Sum(m => m.Duracao);
     private List<Musica> Musicas = new List<Musica>();
+    private List<Avaliacao> notas = new List<Avaliacao>();
     public Banda Banda { get; }
 
     public Album(string nome, Banda banda)
@@ -29,4 +30,11 @@ internal class Album
         }
         Console.WriteLine($"\nDuração total do álbum: {DuracaoTotal} segundos");
     }
+
+    public void AdicionarNota(Avaliacao nota)
+    {
+        notas.Add(nota);
+    }
+
+    public double Media => notas.Count > 0 ? notas.Average(x => x.Nota) : 0;
 }

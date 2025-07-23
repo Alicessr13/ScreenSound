@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ScreenSound.Menus;
-internal class Menu
+
+public class Menu
 {
     public void ExibirTituloDaOpcao(string titulo)
     {
