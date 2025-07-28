@@ -14,12 +14,11 @@ internal class MenuRegistrarAlbum : Menu
         ExibirTituloDaOpcao("Registro de álbuns");
         Console.Write("Digite a banda cujo álbum deseja registrar: ");
         string nomeDaBanda = Console.ReadLine()!;
-        Console.Write("Agora digite o título do álbum: ");
 
         if (bandasRegistradas.ContainsKey(nomeDaBanda))
         {
             Banda banda = bandasRegistradas[nomeDaBanda];
-
+            Console.Write("Agora digite o título do álbum: ");
             string tituloAlbum = Console.ReadLine()!;
             banda.AdicionarAlbum(new Album(tituloAlbum, banda));
             Console.WriteLine($"O álbum {tituloAlbum} de {nomeDaBanda} foi registrado com sucesso!");

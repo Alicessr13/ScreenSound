@@ -1,6 +1,6 @@
 ﻿namespace ScreenSound.Models;
 
-internal class Album : IAvaliavel
+public class Album : IAvaliavel
 {
     public string Nome { get; }
     public int DuracaoTotal => Musicas.Sum(m => m.Duracao);
@@ -12,7 +12,6 @@ internal class Album : IAvaliavel
     {
         Nome = nome;
         Banda = banda;
-        banda.AdicionarAlbum(this);
     }
 
     public void AdicionarMusica(Musica musica)
